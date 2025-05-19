@@ -32,10 +32,10 @@ color_map = {
 }
 
 # Markers for data points
-for date, records in grouped.items():
-    potassium = [r[0] for r in records]
-    moisture = [r[1] for r in records]
-    ph = [r[2] for r in records]
+for date, points in grouped.items():
+    potassium = [r[0] for r in points]
+    moisture = [r[1] for r in points]
+    ph = [r[2] for r in points]
     color = color_map[date]
 
     ax1.scatter(potassium, moisture, color=color, marker='x', linewidths=1.5)
